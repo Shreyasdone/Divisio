@@ -7,9 +7,6 @@ export const validateExpense = (req,res,next) => {
         throw new ExpenseError(400, "Request Body is required");
     }
     let {error} = expenseSchema.validate(req.body); 
-    if(!req.body.expense.paidBy) {
-        throw new ExpenseError(400, "\"expense.paidBy\" is required");
-    }
     if(error) {
         let errMsg = error.details.map((el) => el.message).join(", ");
         throw new ExpenseError(400, errMsg);
