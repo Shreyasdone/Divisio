@@ -1,0 +1,31 @@
+{
+  "name": "divisio",
+  "version": "1.0.0",
+  "description": "A Split App Backend API",
+  "homepage": "https://github.com/Shreyasdone/Divisio#readme",
+  "bugs": {
+    "url": "https://github.com/Shreyasdone/Divisio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shreyasdone/Divisio.git"
+  },
+  "license": "ISC",
+  "author": "Shreyas Done",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "joi": "^17.13.3",
+    "joi-objectid": "^4.0.2",
+    "mongoose": "^8.15.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
