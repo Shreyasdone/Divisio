@@ -5,6 +5,7 @@ import connect from "./src/config/db.js";
 import expenseRouter from "./src/routes/expenseRoutes.js";
 import peopleRouter from "./src/routes/peopleRoutes.js";
 import settlementRouter from "./src/routes/settlementRoutes.js"
+import testRouter from "./src/routes/testRoutes.js"
 import { showError } from "./src/middlewares/errorHandler.js";
 
 const app = express();
@@ -19,6 +20,7 @@ app.get("/", (req,res)=>{
 app.use("/expenses",expenseRouter);
 app.use("/people",peopleRouter);
 app.use("/",settlementRouter);
+app.use("/test",testRouter);
 
 app.use(showError);
 
