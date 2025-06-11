@@ -1,7 +1,15 @@
 import Expense from "../models/Expense.js";
 import User from "../models/User.js";
 
-
+/**
+ * GET /expenses
+ *
+ * Fetches all expenses from the database, populating the 'paidBy' field with user details.
+ * Returns a JSON response with the expenses data.
+ *
+ * @route GET /expenses
+ * @access Public
+ */
 const getExpenses = async (req, res) => {
   let expenses = await Expense.find({}).populate("paidBy").lean();
   expenses = expenses.map((exp) => {
@@ -77,9 +85,9 @@ const updateExpense = async (req, res, next) => {
 
 /**
  * DELETE /expenses/:id
- * 
+ *
  * Deletes an expense by its ID and returns the deleted document.
- * 
+ *
  * @route DELETE /expenses/:id
  * @access Public
  */
