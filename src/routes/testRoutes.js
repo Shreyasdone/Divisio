@@ -11,7 +11,7 @@ const router = Router();
 router.delete("/reset", async (req, res, next) => {
   try {
     await Expense.deleteMany({});
-    await User   .deleteMany({});
+    await User.deleteMany({});
     res.json({ success: true, message: "Database reset" });
   } catch (err) {
     next(err);
